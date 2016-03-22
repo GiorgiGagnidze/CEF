@@ -1,0 +1,37 @@
+<link rel="import" href="chrome://resources/polymer/v1_0/polymer/polymer.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/iron-dropdown/iron-dropdown.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/paper-item/paper-item.html">
+
+<dom-module id="settings-search-engine-entry">
+  <link rel="import" type="css" href="chrome://md-settings/settings_shared.css">
+  <link rel="import" type="css" href="chrome://md-settings/search_engines_page/search_engine_entry.css">
+  <template>
+    <div id="container" class="list-item">
+      <div class="name-column">
+        <span class="icon-container">
+          <iron-icon icon="image:brightness-1" item-icon></iron-icon>
+        </span>
+        <div class="name">{{engine.name}}</div>
+      </div>
+      <div class="keyword-column">{{engine.keyword}}</div>
+      <div class="url-column">{{engine.url}}</div>
+      <div class="icon-container">
+        <paper-icon-button icon="more-vert" toggles active="{{editMenuOpened}}">
+        </paper-icon-button>
+        <iron-dropdown opened="{{editMenuOpened}}" horizontal-align="right"
+            vertical-align="top">
+          <div class="dropdown-content">
+            <paper-item on-tap="onMakeDefaultTap_"
+                i18n-content="searchEnginesMakeDefault"></paper-item>
+            <paper-item on-tap="onEditTap_"
+                i18n-content="searchEnginesEdit"></paper-item>
+            <paper-item on-tap="onDeleteTap_"
+                i18n-content="searchEnginesRemoveFromList"></paper-item>
+          <div>
+        </iron-dropdown>
+      </div>
+    </div>
+  </template>
+  <script src="search_engine_entry.js"></script>
+</dom-module>

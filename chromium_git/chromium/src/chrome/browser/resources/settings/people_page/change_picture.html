@@ -1,0 +1,34 @@
+<link rel="import" href="chrome://resources/html/i18n_behavior.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/iron-selector/iron-selector.html">
+<link rel="import" href="chrome://resources/polymer/v1_0/polymer/polymer.html">
+<link rel="import" href="chrome://md-settings/people_page/change_picture_private_api.html">
+
+<dom-module id="settings-change-picture">
+  <link rel="import" type="css"
+      href="chrome://md-settings/settings_shared.css">
+  <link rel="import" type="css" href="change_picture.css">
+  <template>
+    <div class="settings-box">
+      <div id="available-icons" class="start">
+        <iron-selector id="selector" on-iron-activate="onImageActivate_"
+            selected-item="{{selectedItem_}}">
+          <img id="cameraImage" data-type="camera"
+              src="[[cameraImageUrl_]]" alt="[[cameraImageTitle_]]">
+          <img id="profileImage" data-type="profile"
+              src="[[profileImageUrl_]]"
+              alt="[[i18n('profilePhotoLoading')]]">
+          <img id="oldImage" data-type="old"
+              src="[[oldImageUrl_]]" hidden="[[!oldImageUrl_]]">
+          <template is="dom-repeat" items="[[defaultImages_]]">
+            <img data-type="default" src="[[item.url]]" alt="[[item.title]]">
+          </template>
+        </iron-selector>
+      </div>
+      <div id="preview-pane">
+        <img id="previewImage" src="[[selectedItem_.src]]"
+            hidden="[[isPreviewImageHidden_(selectedItem_)]]">
+      </div>
+    </div>
+  </template>
+  <script src="change_picture.js"></script>
+</dom-module>
