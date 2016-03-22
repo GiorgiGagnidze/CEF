@@ -1,0 +1,169 @@
+// Copyright 2014 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+#include "net/quic/quic_client_session_base.h"
+
+#include "net/quic/quic_client_promised_info.h"
+#include "net/quic/quic_flags.h"
+#include "net/quic/spdy_utils.h"
+
+namespace net {
+
+QuicClientSessionBase::QuicClientSessionBase(
+    QuicConnection* connection,
+    QuicPromisedByUrlMap* promised_by_url,
+    const QuicConfig& config)
+    : QuicSpdySession(connection, config),
+      promised_by_url_(promised_by_url),
+      largest_promised_stream_id_(kInvalidStreamId) {}
+
+QuicClientSessionBase::~QuicClientSessionBase() {
+  //  all promised streams for this session
+  for (auto& it : promised_by_id_) {
+    DVLOG(1) << "erase stream " << it.first << " url " << it.second->url();
+    promised_by_url_->erase(it.second->url());
+  }
+}
+
+void QuicClientSessionBase::OnCryptoHandshakeEvent(CryptoHandshakeEvent event) {
+  QuicSession::OnCryptoHandshakeEvent(event);
+  // Set FEC policy for streams immediately after sending CHLO and before any
+  // more data is sent.
+  if (!FLAGS_enable_quic_fec || event != ENCRYPTION_FIRST_ESTABLISHED ||
+      !config()->HasSendConnectionOptions() ||
+      !ContainsQuicTag(config()->SendConnectionOptions(), kFHDR)) {
+    return;
+  }
+  // kFHDR config maps to FEC protection always for headers stream.
+  // TODO(jri): Add crypto stream in addition to headers for kHDR.
+  headers_stream()->set_fec_policy(FEC_PROTECT_ALWAYS);
+}
+
+void QuicClientSessionBase::OnPromiseHeaders(QuicStreamId stream_id,
+                                             StringPiece headers_data) {
+  QuicSpdyStream* stream = GetSpdyDataStream(stream_id);
+  if (!stream) {
+    // It's quite possible to receive headers after a stream has been reset.
+    return;
+  }
+  stream->OnPromiseHeaders(headers_data);
+}
+
+void QuicClientSessionBase::OnInitialHeadersComplete(
+    QuicStreamId stream_id,
+    const SpdyHeaderBlock& response_headers) {
+  // Note that the strong ordering of the headers stream means that
+  // QuicSpdyClientStream::OnPromiseHeadersComplete must have already
+  // been called (on the associated stream) if this is a promised
+  // stream. However, this stream may not have existed at this time,
+  // hence the need to query the session.
+  QuicClientPromisedInfo* promised = GetPromisedById(stream_id);
+  if (!promised)
+    return;
+
+  promised->OnResponseHeaders(
+      std::unique_ptr<SpdyHeaderBlock>(new SpdyHeaderBlock(response_headers)));
+}
+
+void QuicClientSessionBase::OnPromiseHeadersComplete(
+    QuicStreamId stream_id,
+    QuicStreamId promised_stream_id,
+    size_t frame_len) {
+  if (promised_stream_id != kInvalidStreamId &&
+      promised_stream_id <= largest_promised_stream_id_) {
+    CloseConnectionWithDetails(QUIC_INVALID_STREAM_ID,
+                               "Received push stream id lesser or equal to the"
+                               " last accepted before");
+    return;
+  }
+  largest_promised_stream_id_ = promised_stream_id;
+
+  QuicSpdyStream* stream = GetSpdyDataStream(stream_id);
+  if (!stream) {
+    // It's quite possible to receive headers after a stream has been reset.
+    return;
+  }
+  stream->OnPromiseHeadersComplete(promised_stream_id, frame_len);
+}
+
+void QuicClientSessionBase::HandlePromised(
+    QuicStreamId id,
+    std::unique_ptr<SpdyHeaderBlock> headers) {
+  // Due to pathalogical packet re-ordering, it is possible that
+  // frames for the promised stream have already arrived, and the
+  // promised stream could be active or closed.
+  if (IsClosedStream(id)) {
+    // There was a RST on the data stream already, perhaps
+    // QUIC_REFUSED_STREAM?
+    DVLOG(1) << "Promise ignored for stream " << id
+             << " that is already closed";
+    return;
+  }
+
+  if (promised_by_url_->size() >= get_max_promises()) {
+    DVLOG(1) << "Too many promises, rejecting promise for stream " << id;
+    ResetPromised(id, QUIC_REFUSED_STREAM);
+    return;
+  }
+
+  const string url = SpdyUtils::GetUrlFromHeaderBlock(*headers);
+  QuicClientPromisedInfo* old_promised = GetPromisedByUrl(url);
+  if (old_promised) {
+    DVLOG(1) << "Promise for stream " << id << " is duplicate URL " << url
+             << " of previous promise for stream " << old_promised->id();
+    ResetPromised(id, QUIC_DUPLICATE_PROMISE_URL);
+    return;
+  }
+
+  if (GetPromisedById(id)) {
+    // OnPromiseHeadersComplete() would have closed the connection if
+    // promised id is a duplicate.
+    QUIC_BUG << "Duplicate promise for id " << id;
+    return;
+  }
+
+  QuicClientPromisedInfo* promised = new QuicClientPromisedInfo(this, id, url);
+  std::unique_ptr<QuicClientPromisedInfo> promised_owner(promised);
+  promised->Init();
+  DVLOG(1) << "stream " << id << " emplace url " << url;
+  (*promised_by_url_)[url] = promised;
+  promised_by_id_[id] = std::move(promised_owner);
+  promised->OnPromiseHeaders(std::move(headers));
+}
+
+QuicClientPromisedInfo* QuicClientSessionBase::GetPromisedByUrl(
+    const string& url) {
+  QuicPromisedByUrlMap::iterator it = promised_by_url_->find(url);
+  if (it != promised_by_url_->end()) {
+    return it->second;
+  }
+  return nullptr;
+}
+
+QuicClientPromisedInfo* QuicClientSessionBase::GetPromisedById(
+    const QuicStreamId id) {
+  QuicPromisedByIdMap::iterator it = promised_by_id_.find(id);
+  if (it != promised_by_id_.end()) {
+    return it->second.get();
+  }
+  return nullptr;
+}
+
+void QuicClientSessionBase::DeletePromised(QuicClientPromisedInfo* promised) {
+  promised_by_url_->erase(promised->url());
+  // Since promised_by_id_ contains the unique_ptr, this will destroy
+  // promised.
+  promised_by_id_.erase(promised->id());
+}
+
+void QuicClientSessionBase::ResetPromised(QuicStreamId id,
+                                          QuicRstStreamErrorCode error_code) {
+  SendRstStream(id, error_code, 0);
+  if (!IsOpenStream(id)) {
+    MaybeIncreaseLargestPeerStreamId(id);
+    InsertLocallyClosedStreamsHighestOffset(id, 0);
+  }
+}
+
+}  // namespace net
