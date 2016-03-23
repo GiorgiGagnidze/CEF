@@ -1,0 +1,15 @@
+include_rules = [
+    "+base/trace_event",
+    "-bindings",
+    "+cc",
+    "-cc/blink",
+    "-core",
+    "-modules",
+    "+platform",
+    "+platform/weborigin",
+    "+public/platform",
+    "-public/web",
+    "+third_party/skia",
+    "+url",
+    "-web",
+]

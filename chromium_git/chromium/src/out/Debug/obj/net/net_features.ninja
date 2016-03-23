@@ -1,0 +1,13 @@
+rule net_features_target_buildflag_header_db57090cdc89a6c7021a4289e83af0f1
+  command = cd ../../net; python ../build/write_buildflag_header.py $
+      --output net/net_features.h --rulename net_features --gen-dir $
+      ../out/Debug/gen --definitions $
+      ../out/net/net_features_buildflag_header.rsp
+  description = ACTION Generating build header.
+  restat = 1
+
+build gen/net/net_features.h: $
+    net_features_target_buildflag_header_db57090cdc89a6c7021a4289e83af0f1 $
+    ../../build/write_buildflag_header.py $
+    ../../out/net/net_features_buildflag_header.rsp
+

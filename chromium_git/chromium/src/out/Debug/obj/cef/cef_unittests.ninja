@@ -1,0 +1,375 @@
+build obj/cef/cef_unittests.actions_depends.stamp: stamp obj/base/libbase.a $
+    obj/base/libbase_i18n.a obj/base/libtest_support_base.a $
+    obj/testing/libgtest.a obj/third_party/icu/libicui18n.a $
+    obj/third_party/icu/libicuuc.a obj/ui/base/libui_base.a $
+    obj/cef/libcef_dll_wrapper.a lib/libcef.so.TOC $
+    obj/base/allocator/liballocator.a $
+    obj/base/third_party/dynamic_annotations/libdynamic_annotations.a $
+    gen/base/debug/debugging_flags.h obj/base/libbase_static.a $
+    obj/third_party/modp_b64/libmodp_b64.a obj/base/libsymbolize.a $
+    obj/base/libxdg_mime.a obj/base/third_party/libevent/libevent.a $
+    icudtl.dat icudtl.dat obj/testing/libgmock.a $
+    obj/third_party/libxml/libxml2.a obj/third_party/zlib/libchrome_zlib.a $
+    obj/third_party/zlib/libzlib_x86_simd.a obj/net/libnet.a $
+    obj/third_party/brotli/libbrotli.a $
+    obj/third_party/protobuf/libprotobuf_lite.a obj/url/liburl_lib.a $
+    gen/net/net_features.h obj/net/libnet_quic_proto.a $
+    obj/crypto/libcrcrypto.a obj/third_party/boringssl/libboringssl.a $
+    obj/third_party/boringssl/libboringssl.a $
+    obj/third_party/boringssl/libboringssl_asm.a obj/sdch/libsdch.a $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/build/linux/libgio.a obj/skia/skia.actions_depends.stamp $
+    obj/skia/libskia_library.a obj/skia/libskia_opts.a $
+    obj/skia/libskia_opts_ssse3.a obj/skia/libskia_opts_sse41.a $
+    obj/skia/libskia_opts_sse42.a obj/skia/libskia_opts_avx.a $
+    obj/skia/libskia_opts_avx2.a obj/third_party/sfntly/libsfntly.a $
+    obj/skia/libskia_chrome.a obj/ui/events/libevents.a obj/ui/gfx/libgfx.a $
+    obj/third_party/harfbuzz-ng/libharfbuzz-ng.a $
+    obj/third_party/libpng/libpng.a obj/ui/gfx/libgfx_geometry.a $
+    obj/third_party/libjpeg_turbo/libjpeg_turbo.a obj/ui/gfx/x/libgfx_x11.a $
+    obj/ui/events/libdom_keycode_converter.a obj/ui/events/libevents_base.a $
+    obj/ui/events/libgesture_detection.a $
+    obj/ui/events/devices/libevents_devices.a obj/ui/events/x/libevents_x.a $
+    obj/ui/events/platform/libevents_platform.a $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp $
+    obj/ui/events/platform/x11/libx11_events_platform.a
+
+build obj/cef/cef_unittests.compile_depends.stamp: stamp $
+    gen/base/debug/debugging_flags.h icudtl.dat $
+    obj/ui/base/ui_base.compile_depends.stamp $
+    obj/cef/libcef.compile_depends.stamp $
+    obj/cef/libcef.compile_depends.stamp gen/base/debug/debugging_flags.h $
+    icudtl.dat icudtl.dat obj/net/net.compile_depends.stamp $
+    gen/net/net_features.h $
+    obj/net/net_quic_proto.actions_rules_copies.stamp $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/build/linux/gio.actions_rules_copies.stamp $
+    obj/third_party/libjpeg_turbo/libjpeg.actions_rules_copies.stamp $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp
+
+build files/osr_test.html: copy $
+    ../../cef/tests/cefclient/resources/osr_test.html || $
+    obj/cef/cef_unittests.actions_depends.stamp
+build files/pdf.html: copy ../../cef/tests/cefclient/resources/pdf.html || $
+    obj/cef/cef_unittests.actions_depends.stamp
+build files/pdf.pdf: copy ../../cef/tests/cefclient/resources/pdf.pdf || $
+    obj/cef/cef_unittests.actions_depends.stamp
+build obj/cef/cef_unittests.actions_rules_copies.stamp: stamp $
+    files/osr_test.html files/pdf.html files/pdf.pdf
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 -D_FILE_OFFSET_BITS=64 $
+    -DCHROMIUM_BUILD -DCR_CLANG_REVISION=259395-1 $
+    -DUI_COMPOSITOR_IMAGE_TRANSPORT -DUSE_AURA=1 -DUSE_PANGO=1 $
+    -DUSE_CAIRO=1 -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 $
+    -DUSE_X11=1 -DUSE_CLIPBOARD_AURAX11=1 -DENABLE_ONE_CLICK_SIGNIN $
+    -DENABLE_WEBRTC=1 -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DENABLE_TOPCHROME_MD=1 -DUSE_UDEV -DDONT_EMBED_BUILD_METADATA $
+    -DFIELDTRIAL_TESTING_ENABLED -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_SPELLCHECK=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_MDNS=1 -DENABLE_SERVICE_DISCOVERY=1 $
+    -DV8_USE_EXTERNAL_STARTUP_DATA -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD $
+    -DSAFE_BROWSING_DB_LOCAL -DGTEST_HAS_POSIX_RE=0 -DGTEST_LANG_CXX11=0 $
+    -DGL_GLEXT_PROTOTYPES -DMOJO_USE_SYSTEM_IMPL -DTOOLKIT_VIEWS=1 $
+    -DUNIT_TEST -DGTEST_HAS_RTTI=0 -DU_USING_ICU_NAMESPACE=0 $
+    -DU_ENABLE_DYLOAD=0 -DU_STATIC_IMPLEMENTATION -DSK_SUPPORT_GPU=1 $
+    -DSK_IGNORE_LINEONLY_AA_CONVEX_PATH_OPTS -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 $
+    -DUSE_GLIB=1 -DUSE_NSS_CERTS=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DDYNAMIC_ANNOTATIONS_ENABLED=1 $
+    -DWTF_USE_DYNAMIC_ANNOTATIONS=1 -D_DEBUG -D_GLIBCXX_DEBUG=1
+includes = -Igen -I../../cef -I../../cef/tests -I../.. -I../../skia/config $
+    -I../../third_party/WebKit/Source -I../../third_party/khronos $
+    -I../../gpu -Igen/angle -I../../testing/gtest/include $
+    -I../../third_party/icu/source/i18n $
+    -I../../third_party/icu/source/common $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/lazy $
+    -I../../third_party/skia/include/pathops $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils -I../../skia/ext
+cflags = -fstack-protector --param=ssp-buffer-size=4 -Werror -pthread $
+    -fno-strict-aliasing -Wall -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -fcolor-diagnostics $
+    -B/home/gagn-ubuntu/code/chromium_git/chromium/src/third_party/binutils/Linux_x64/Release/bin $
+    -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value -pthread $
+    -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include $
+    -m64 -march=x86-64 -O0 -g -funwind-tables -gsplit-dwarf
+cflags_c = 
+cflags_cc = -Wno-c++0x-compat -fno-exceptions -fno-rtti $
+    -fno-threadsafe-statics -fvisibility-inlines-hidden -std=gnu++11
+arflags = 
+
+build obj/cef/tests/cefclient/browser/cef_unittests.client_app_browser.o: $
+    cxx ../../cef/tests/cefclient/browser/client_app_browser.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/cefclient/common/cef_unittests.client_app.o: cxx $
+    ../../cef/tests/cefclient/common/client_app.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/cefclient/common/cef_unittests.client_app_other.o: cxx $
+    ../../cef/tests/cefclient/common/client_app_other.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/cefclient/common/cef_unittests.client_switches.o: cxx $
+    ../../cef/tests/cefclient/common/client_switches.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/cefclient/renderer/cef_unittests.client_app_renderer.o: $
+    cxx ../../cef/tests/cefclient/renderer/client_app_renderer.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.browser_info_map_unittest.o: $
+    cxx ../../cef/tests/unittests/browser_info_map_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.command_line_unittest.o: cxx $
+    ../../cef/tests/unittests/command_line_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.cookie_unittest.o: cxx $
+    ../../cef/tests/unittests/cookie_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.dialog_unittest.o: cxx $
+    ../../cef/tests/unittests/dialog_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.display_unittest.o: cxx $
+    ../../cef/tests/unittests/display_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.dom_unittest.o: cxx $
+    ../../cef/tests/unittests/dom_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.download_unittest.o: cxx $
+    ../../cef/tests/unittests/download_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.draggable_regions_unittest.o: $
+    cxx ../../cef/tests/unittests/draggable_regions_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.frame_unittest.o: cxx $
+    ../../cef/tests/unittests/frame_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.geolocation_unittest.o: cxx $
+    ../../cef/tests/unittests/geolocation_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.jsdialog_unittest.o: cxx $
+    ../../cef/tests/unittests/jsdialog_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.life_span_unittest.o: cxx $
+    ../../cef/tests/unittests/life_span_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.message_router_unittest.o: cxx $
+    ../../cef/tests/unittests/message_router_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.navigation_unittest.o: cxx $
+    ../../cef/tests/unittests/navigation_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.os_rendering_unittest.o: cxx $
+    ../../cef/tests/unittests/os_rendering_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.parser_unittest.o: cxx $
+    ../../cef/tests/unittests/parser_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.plugin_unittest.o: cxx $
+    ../../cef/tests/unittests/plugin_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.preference_unittest.o: cxx $
+    ../../cef/tests/unittests/preference_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.print_unittest.o: cxx $
+    ../../cef/tests/unittests/print_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.process_message_unittest.o: cxx $
+    ../../cef/tests/unittests/process_message_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.request_context_unittest.o: cxx $
+    ../../cef/tests/unittests/request_context_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.request_handler_unittest.o: cxx $
+    ../../cef/tests/unittests/request_handler_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.request_unittest.o: cxx $
+    ../../cef/tests/unittests/request_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.resource_manager_unittest.o: $
+    cxx ../../cef/tests/unittests/resource_manager_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.routing_test_handler.o: cxx $
+    ../../cef/tests/unittests/routing_test_handler.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.run_all_unittests.o: cxx $
+    ../../cef/tests/unittests/run_all_unittests.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.scheme_handler_unittest.o: cxx $
+    ../../cef/tests/unittests/scheme_handler_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.stream_unittest.o: cxx $
+    ../../cef/tests/unittests/stream_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build $
+    obj/cef/tests/unittests/cef_unittests.stream_resource_handler_unittest.o: $
+    cxx ../../cef/tests/unittests/stream_resource_handler_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.string_unittest.o: cxx $
+    ../../cef/tests/unittests/string_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.client_app_delegates.o: cxx $
+    ../../cef/tests/unittests/client_app_delegates.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.task_unittest.o: cxx $
+    ../../cef/tests/unittests/task_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.test_handler.o: cxx $
+    ../../cef/tests/unittests/test_handler.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.test_suite.o: cxx $
+    ../../cef/tests/unittests/test_suite.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.test_util.o: cxx $
+    ../../cef/tests/unittests/test_util.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.tracing_unittest.o: cxx $
+    ../../cef/tests/unittests/tracing_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.translator_unittest.o: cxx $
+    ../../cef/tests/unittests/translator_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.urlrequest_unittest.o: cxx $
+    ../../cef/tests/unittests/urlrequest_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.v8_unittest.o: cxx $
+    ../../cef/tests/unittests/v8_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.values_unittest.o: cxx $
+    ../../cef/tests/unittests/values_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.version_unittest.o: cxx $
+    ../../cef/tests/unittests/version_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.xml_reader_unittest.o: cxx $
+    ../../cef/tests/unittests/xml_reader_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/unittests/cef_unittests.zip_reader_unittest.o: cxx $
+    ../../cef/tests/unittests/zip_reader_unittest.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/cefclient/browser/cef_unittests.resource_util_linux.o: $
+    cxx ../../cef/tests/cefclient/browser/resource_util_linux.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+build obj/cef/tests/cefclient/browser/cef_unittests.resource_util_posix.o: $
+    cxx ../../cef/tests/cefclient/browser/resource_util_posix.cc || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+
+ldflags = -Wl,-z,now -Wl,-z,relro -Wl,--fatal-warnings -Wl,-z,defs -pthread $
+    -Wl,-z,noexecstack -fPIC -fuse-ld=gold $
+    -B/home/gagn-ubuntu/code/chromium_git/chromium/src/third_party/binutils/Linux_x64/Release/bin $
+    -Wl,--disable-new-dtags -L. -Wl,-uIsHeapProfilerRunning,-uProfilerStart $
+    -Wl,-u_Z21InitialMallocHook_NewPKvj,-u_Z22InitialMallocHook_MMapPKvS0_jiiix,-u_Z22InitialMallocHook_SbrkPKvi $
+    -Wl,-u_Z21InitialMallocHook_NewPKvm,-u_Z22InitialMallocHook_MMapPKvS0_miiil,-u_Z22InitialMallocHook_SbrkPKvl $
+    -Wl,-u_ZN15HeapLeakChecker12IgnoreObjectEPKv,-u_ZN15HeapLeakChecker14UnIgnoreObjectEPKv $
+    -Wl,-uhb_ft_face_create_cached,-uhb_glib_get_unicode_funcs -m64 $
+    -Wl,--icf=all -Wl,-rpath=\$$ORIGIN/lib/ -Wl,-rpath-link=lib/
+libs =  -lrt -ldl -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lglib-2.0 -lm $
+    -lnss3 -lnssutil3 -lsmime3 -lplds4 -lplc4 -lnspr4 -lgconf-2 -lgio-2.0 $
+    -lresolv -lfontconfig -lfreetype -lpangocairo-1.0 -lcairo $
+    -lpangoft2-1.0 -lpango-1.0 -lX11 -lXi -lXcursor -lXext -lXfixes $
+    -lXrender -lXss
+build cef_unittests: link $
+    obj/cef/tests/cefclient/browser/cef_unittests.client_app_browser.o $
+    obj/cef/tests/cefclient/common/cef_unittests.client_app.o $
+    obj/cef/tests/cefclient/common/cef_unittests.client_app_other.o $
+    obj/cef/tests/cefclient/common/cef_unittests.client_switches.o $
+    obj/cef/tests/cefclient/renderer/cef_unittests.client_app_renderer.o $
+    obj/cef/tests/unittests/cef_unittests.browser_info_map_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.command_line_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.cookie_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.dialog_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.display_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.dom_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.download_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.draggable_regions_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.frame_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.geolocation_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.jsdialog_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.life_span_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.message_router_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.navigation_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.os_rendering_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.parser_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.plugin_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.preference_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.print_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.process_message_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.request_context_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.request_handler_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.request_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.resource_manager_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.routing_test_handler.o $
+    obj/cef/tests/unittests/cef_unittests.run_all_unittests.o $
+    obj/cef/tests/unittests/cef_unittests.scheme_handler_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.stream_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.stream_resource_handler_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.string_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.client_app_delegates.o $
+    obj/cef/tests/unittests/cef_unittests.task_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.test_handler.o $
+    obj/cef/tests/unittests/cef_unittests.test_suite.o $
+    obj/cef/tests/unittests/cef_unittests.test_util.o $
+    obj/cef/tests/unittests/cef_unittests.tracing_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.translator_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.urlrequest_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.v8_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.values_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.version_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.xml_reader_unittest.o $
+    obj/cef/tests/unittests/cef_unittests.zip_reader_unittest.o $
+    obj/cef/tests/cefclient/browser/cef_unittests.resource_util_linux.o $
+    obj/cef/tests/cefclient/browser/cef_unittests.resource_util_posix.o $
+    obj/base/libbase.a obj/base/libbase_i18n.a $
+    obj/base/libtest_support_base.a obj/testing/libgtest.a $
+    obj/third_party/icu/libicui18n.a obj/third_party/icu/libicuuc.a $
+    obj/ui/base/libui_base.a obj/cef/libcef_dll_wrapper.a $
+    obj/base/allocator/liballocator.a $
+    obj/base/third_party/dynamic_annotations/libdynamic_annotations.a $
+    obj/base/libbase_static.a obj/third_party/modp_b64/libmodp_b64.a $
+    obj/base/libsymbolize.a obj/base/libxdg_mime.a $
+    obj/base/third_party/libevent/libevent.a obj/testing/libgmock.a $
+    obj/third_party/libxml/libxml2.a obj/third_party/zlib/libchrome_zlib.a $
+    obj/third_party/zlib/libzlib_x86_simd.a obj/net/libnet.a $
+    obj/third_party/brotli/libbrotli.a $
+    obj/third_party/protobuf/libprotobuf_lite.a obj/url/liburl_lib.a $
+    obj/net/libnet_quic_proto.a obj/crypto/libcrcrypto.a $
+    obj/third_party/boringssl/libboringssl.a $
+    obj/third_party/boringssl/libboringssl_asm.a obj/sdch/libsdch.a $
+    obj/build/linux/libgio.a obj/skia/libskia_library.a $
+    obj/skia/libskia_opts.a obj/skia/libskia_opts_ssse3.a $
+    obj/skia/libskia_opts_sse41.a obj/skia/libskia_opts_sse42.a $
+    obj/skia/libskia_opts_avx.a obj/skia/libskia_opts_avx2.a $
+    obj/third_party/sfntly/libsfntly.a obj/skia/libskia_chrome.a $
+    obj/ui/events/libevents.a obj/ui/gfx/libgfx.a $
+    obj/third_party/harfbuzz-ng/libharfbuzz-ng.a $
+    obj/third_party/libpng/libpng.a obj/ui/gfx/libgfx_geometry.a $
+    obj/third_party/libjpeg_turbo/libjpeg_turbo.a obj/ui/gfx/x/libgfx_x11.a $
+    obj/ui/events/libdom_keycode_converter.a obj/ui/events/libevents_base.a $
+    obj/ui/events/libgesture_detection.a $
+    obj/ui/events/devices/libevents_devices.a obj/ui/events/x/libevents_x.a $
+    obj/ui/events/platform/libevents_platform.a $
+    obj/ui/events/platform/x11/libx11_events_platform.a | $
+    gen/base/debug/debugging_flags.h gen/net/net_features.h icudtl.dat $
+    lib/libcef.so.TOC $
+    obj/net/net_derived_sources.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/skia/skia.actions_depends.stamp $
+    obj/third_party/boringssl/libboringssl.a $
+    obj/ui/resources/ui_resources.actions_rules_copies.stamp $
+    obj/ui/strings/ui_strings.actions_rules_copies.stamp || $
+    obj/cef/cef_unittests.actions_rules_copies.stamp
+  ld = $ldxx
+  solibs = lib/libcef.so

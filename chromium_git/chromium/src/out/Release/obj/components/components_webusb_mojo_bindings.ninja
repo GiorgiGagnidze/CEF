@@ -1,0 +1,78 @@
+build obj/components/components_webusb_mojo_bindings.actions_depends.stamp: $
+    stamp obj/base/libbase.a $
+    obj/mojo/public/tools/bindings/precompile_mojom_bindings_generator_templates.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp
+
+build obj/components/components_webusb_mojo_bindings.compile_depends.stamp: $
+    stamp gen/base/debug/debugging_flags.h $
+    obj/mojo/public/tools/bindings/precompile_mojom_bindings_generator_templates.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp
+
+rule $
+    components_webusb_mojo_bindings_target_components_webusb_mojo_bindings_mojom_bindings_stamp_8e7d0fa79739db2d02a45cf87f6615f6
+  command = cd ../../components; python ../build/rmdir_and_stamp.py $
+      ../out/Release/java_mojo/components_webusb_mojo_bindings/src $
+      ../out/Release/java_mojo/components_webusb_mojo_bindings/components_webusb_mojo_bindings.stamp
+  description = ACTION components_webusb_mojo_bindings: $
+      components_webusb_mojo_bindings_mojom_bindings_stamp_8e7d0fa79739db2d02a45cf87f6615f6
+  restat = 1
+
+build $
+    java_mojo/components_webusb_mojo_bindings/components_webusb_mojo_bindings.stamp: $
+    components_webusb_mojo_bindings_target_components_webusb_mojo_bindings_mojom_bindings_stamp_8e7d0fa79739db2d02a45cf87f6615f6 $
+    ../../components/webusb/public/interfaces/webusb_permission_bubble.mojom $
+    gen/mojo/public/tools/bindings/cpp_templates.zip $
+    gen/mojo/public/tools/bindings/java_templates.zip $
+    gen/mojo/public/tools/bindings/js_templates.zip || $
+    obj/components/components_webusb_mojo_bindings.actions_depends.stamp
+
+rule $
+    components_webusb_mojo_bindings_target_components_webusb_mojo_bindings_mojom_bindings_generator_8e7d0fa79739db2d02a45cf87f6615f6
+  command = cd ../../components; python $
+      ../mojo/public/tools/bindings/mojom_bindings_generator.py $
+      --use_bundled_pylibs generate $
+      webusb/public/interfaces/webusb_permission_bubble.mojom -d .. -I.. $
+      -I../mojo/services -I.. -o ../out/Release/gen $
+      "--java_output_directory=../out/Release/java_mojo/components_webusb_mojo_bindings/src" $
+      --variant none -g c++,javascript,java --bytecode_path $
+      ../out/Release/gen/mojo/public/tools/bindings
+  description = ACTION Generating Mojo bindings from $
+      webusb/public/interfaces/webusb_permission_bubble.mojom
+  restat = 1
+
+build $
+    gen/components/webusb/public/interfaces/webusb_permission_bubble.mojom.cc $
+    gen/components/webusb/public/interfaces/webusb_permission_bubble.mojom.h $
+    gen/components/webusb/public/interfaces/webusb_permission_bubble.mojom-internal.h $
+    gen/components/webusb/public/interfaces/webusb_permission_bubble.mojom.js: $
+    components_webusb_mojo_bindings_target_components_webusb_mojo_bindings_mojom_bindings_generator_8e7d0fa79739db2d02a45cf87f6615f6 $
+    ../../mojo/public/tools/bindings/mojom_bindings_generator.py $
+    ../../mojo/public/tools/bindings/generators/mojom_cpp_generator.py $
+    ../../mojo/public/tools/bindings/generators/mojom_java_generator.py $
+    ../../mojo/public/tools/bindings/generators/mojom_js_generator.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/error.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/data.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/generator.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/module.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/pack.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/template_expander.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/ast.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/lexer.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/parser.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/translate.py $
+    ../../components/webusb/public/interfaces/webusb_permission_bubble.mojom $
+    java_mojo/components_webusb_mojo_bindings/components_webusb_mojo_bindings.stamp $
+    || obj/components/components_webusb_mojo_bindings.actions_depends.stamp
+
+build $
+    obj/components/components_webusb_mojo_bindings.actions_rules_copies.stamp: $
+    stamp $
+    java_mojo/components_webusb_mojo_bindings/components_webusb_mojo_bindings.stamp $
+    gen/components/webusb/public/interfaces/webusb_permission_bubble.mojom.cc $
+    gen/components/webusb/public/interfaces/webusb_permission_bubble.mojom.h $
+    gen/components/webusb/public/interfaces/webusb_permission_bubble.mojom-internal.h $
+    gen/components/webusb/public/interfaces/webusb_permission_bubble.mojom.js
+

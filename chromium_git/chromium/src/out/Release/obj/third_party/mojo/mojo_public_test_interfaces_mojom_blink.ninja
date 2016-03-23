@@ -1,0 +1,226 @@
+build $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_depends.stamp: $
+    stamp $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom.actions_rules_copies.stamp $
+    obj/base/libbase.a $
+    obj/mojo/public/tools/bindings/precompile_mojom_bindings_generator_templates.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp
+
+build $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.compile_depends.stamp: $
+    stamp $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom.actions_rules_copies.stamp $
+    gen/base/debug/debugging_flags.h $
+    obj/mojo/public/tools/bindings/precompile_mojom_bindings_generator_templates.actions_rules_copies.stamp $
+    obj/third_party/mojo/mojo_interface_bindings_mojom.actions_rules_copies.stamp
+
+rule $
+    mojo_public_test_interfaces_mojom_blink_target_mojo_public_test_interfaces_mojom_blink_mojom_bindings_stamp_10697b61d9afa9f22b4036128471a3d6
+  command = cd ../../third_party/mojo; python $
+      ../../build/rmdir_and_stamp.py $
+      ../../out/Release/java_mojo/mojo_public_test_interfaces_mojom_blink/src $
+      ../../out/Release/java_mojo/mojo_public_test_interfaces_mojom_blink/mojo_public_test_interfaces_mojom_blink.stamp
+  description = ACTION mojo_public_test_interfaces_mojom_blink: $
+      mojo_public_test_interfaces_mojom_blink_mojom_bindings_stamp_10697b61d9afa9f22b4036128471a3d6
+  restat = 1
+
+build $
+    java_mojo/mojo_public_test_interfaces_mojom_blink/mojo_public_test_interfaces_mojom_blink.stamp: $
+    mojo_public_test_interfaces_mojom_blink_target_mojo_public_test_interfaces_mojom_blink_mojom_bindings_stamp_10697b61d9afa9f22b4036128471a3d6 $
+    ../../mojo/public/interfaces/bindings/tests/test_native_types.mojom $
+    gen/mojo/public/tools/bindings/cpp_templates.zip $
+    gen/mojo/public/tools/bindings/java_templates.zip $
+    gen/mojo/public/tools/bindings/js_templates.zip || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_depends.stamp
+
+rule $
+    mojo_public_test_interfaces_mojom_blink_target_mojo_public_test_interfaces_mojom_blink_mojom_bindings_generator_10697b61d9afa9f22b4036128471a3d6
+  command = cd ../../third_party/mojo; python $
+      ../../mojo/public/tools/bindings/mojom_bindings_generator.py $
+      --use_bundled_pylibs generate $
+      ../../mojo/public/interfaces/bindings/tests/test_native_types.mojom $
+      -d ../.. -I../.. -I../../mojo/services -I../.. -o $
+      ../../out/Release/gen $
+      "--java_output_directory=../../out/Release/java_mojo/mojo_public_test_interfaces_mojom_blink/src" $
+      --variant blink -g c++ --typemap $
+      ../../mojo/public/interfaces/bindings/tests/blink_test.typemap $
+      --bytecode_path ../../out/Release/gen/mojo/public/tools/bindings
+  description = ACTION Generating Mojo bindings from $
+      ../../mojo/public/interfaces/bindings/tests/test_native_types.mojom
+  restat = 1
+
+build $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/test_native_types.mojom-blink.cc $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/test_native_types.mojom-blink.h $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/test_native_types.mojom-blink-internal.h: $
+    mojo_public_test_interfaces_mojom_blink_target_mojo_public_test_interfaces_mojom_blink_mojom_bindings_generator_10697b61d9afa9f22b4036128471a3d6 $
+    ../../mojo/public/tools/bindings/mojom_bindings_generator.py $
+    ../../mojo/public/tools/bindings/generators/mojom_cpp_generator.py $
+    ../../mojo/public/tools/bindings/generators/mojom_java_generator.py $
+    ../../mojo/public/tools/bindings/generators/mojom_js_generator.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/error.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/data.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/generator.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/module.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/pack.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/generate/template_expander.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/__init__.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/ast.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/lexer.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/parser.py $
+    ../../mojo/public/tools/bindings/pylib/mojom/parse/translate.py $
+    ../../mojo/public/interfaces/bindings/tests/test_native_types.mojom $
+    java_mojo/mojo_public_test_interfaces_mojom_blink/mojo_public_test_interfaces_mojom_blink.stamp $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_depends.stamp
+
+build $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp: $
+    stamp $
+    java_mojo/mojo_public_test_interfaces_mojom_blink/mojo_public_test_interfaces_mojom_blink.stamp $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/test_native_types.mojom-blink.cc $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/test_native_types.mojom-blink.h $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/test_native_types.mojom-blink-internal.h
+
+defines = -DV8_DEPRECATION_WARNINGS -DCLD_VERSION=2 -D_FILE_OFFSET_BITS=64 $
+    -DCHROMIUM_BUILD -DCR_CLANG_REVISION=259395-1 $
+    -DUI_COMPOSITOR_IMAGE_TRANSPORT -DUSE_AURA=1 -DUSE_PANGO=1 $
+    -DUSE_CAIRO=1 -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 $
+    -DUSE_X11=1 -DUSE_CLIPBOARD_AURAX11=1 -DENABLE_ONE_CLICK_SIGNIN $
+    -DENABLE_WEBRTC=1 -DENABLE_MEDIA_ROUTER=1 -DENABLE_PEPPER_CDMS $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_NOTIFICATIONS -DENABLE_HIDPI=1 $
+    -DENABLE_TOPCHROME_MD=1 -DUSE_UDEV -DDONT_EMBED_BUILD_METADATA $
+    -DFIELDTRIAL_TESTING_ENABLED -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_EXTENSIONS=1 -DENABLE_PDF=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_AUTOFILL_DIALOG=1 $
+    -DENABLE_BACKGROUND=1 -DENABLE_PRINTING=1 -DENABLE_BASIC_PRINTING=1 $
+    -DENABLE_SPELLCHECK=1 -DENABLE_CAPTIVE_PORTAL_DETECTION=1 $
+    -DENABLE_APP_LIST=1 -DENABLE_SETTINGS_APP=1 -DENABLE_SUPERVISED_USERS=1 $
+    -DENABLE_MDNS=1 -DENABLE_SERVICE_DISCOVERY=1 $
+    -DV8_USE_EXTERNAL_STARTUP_DATA -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD $
+    -DSAFE_BROWSING_DB_LOCAL -DUSE_LIBPCI=1 -DUSE_OPENSSL=1 -DUSE_GLIB=1 $
+    -DUSE_NSS_CERTS=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0
+includes = -I../.. -Igen
+cflags = -fstack-protector --param=ssp-buffer-size=4 -Werror -pthread $
+    -fno-strict-aliasing -Wall -Wextra -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -fcolor-diagnostics $
+    -B/home/gagn-ubuntu/code/chromium_git/chromium/src/third_party/binutils/Linux_x64/Release/bin $
+    -Wheader-hygiene -Wno-char-subscripts $
+    -Wno-unneeded-internal-declaration -Wno-covered-switch-default $
+    -Wstring-conversion -Wno-c++11-narrowing -Wno-deprecated-register $
+    -Wno-inconsistent-missing-override -Wno-shift-negative-value -pthread $
+    -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include $
+    -m64 -march=x86-64 -O2 -fno-ident -fdata-sections -ffunction-sections $
+    -funwind-tables
+cflags_c = 
+cflags_cc = -fno-exceptions -fno-rtti -fno-threadsafe-statics $
+    -fvisibility-inlines-hidden -std=gnu++11
+arflags = 
+
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.math_calculator.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/math_calculator.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.no_module.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/no_module.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.ping_service.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/ping_service.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.rect.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/rect.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.regression_tests.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/regression_tests.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.sample_factory.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/sample_factory.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.sample_import.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/sample_import.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.sample_import2.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/sample_import2.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.sample_interfaces.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/sample_interfaces.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.sample_service.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/sample_service.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.scoping.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/scoping.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.serialization_test_structs.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/serialization_test_structs.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.test_constants.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/test_constants.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.test_native_types.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/test_native_types.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.test_structs.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/test_structs.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.test_unions.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/test_unions.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+build $
+    obj/third_party/mojo/gen/mojo/public/interfaces/bindings/tests/mojo_public_test_interfaces_mojom_blink.validation_test_interfaces.mojom.o: $
+    cxx $
+    gen/third_party/mojo/../../mojo/public/interfaces/bindings/tests/validation_test_interfaces.mojom.cc $
+    || $
+    obj/third_party/mojo/mojo_public_test_interfaces_mojom_blink.actions_rules_copies.stamp
+

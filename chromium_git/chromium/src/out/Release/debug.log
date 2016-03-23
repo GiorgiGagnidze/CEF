@@ -1,0 +1,662 @@
+[0225/140011:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0225/140211:WARNING:x11_util.cc(1407)] X error received: serial 9988, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0225/140211:WARNING:x11_util.cc(1407)] X error received: serial 9991, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0225/153723:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0225/153826:WARNING:x11_util.cc(1407)] X error received: serial 13231, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0225/153826:WARNING:x11_util.cc(1407)] X error received: serial 13234, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0225/153826:WARNING:x11_util.cc(1407)] X error received: serial 13266, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0225/153826:WARNING:x11_util.cc(1407)] X error received: serial 13267, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0225/172518:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0225/172528:WARNING:x11_util.cc(1407)] X error received: serial 938, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0225/172528:WARNING:x11_util.cc(1407)] X error received: serial 939, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0225/172528:WARNING:x11_util.cc(1407)] X error received: serial 940, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0225/172528:WARNING:x11_util.cc(1407)] X error received: serial 1024, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0225/172528:WARNING:x11_util.cc(1407)] X error received: serial 1027, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0225/174413:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0225/174417:WARNING:x11_util.cc(1407)] X error received: serial 290, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0225/174417:WARNING:x11_util.cc(1407)] X error received: serial 291, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0225/174417:WARNING:x11_util.cc(1407)] X error received: serial 292, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0225/174417:WARNING:x11_util.cc(1407)] X error received: serial 376, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0225/174417:WARNING:x11_util.cc(1407)] X error received: serial 379, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/121941:FATAL:browser_main_loop.cc(217)] Running without the SUID sandbox! See https://chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox_development.md for more information on developing with the sandbox on.
+#0 0x7fe546c32fbe base::debug::StackTrace::StackTrace()
+#1 0x7fe546c47a2b logging::LogMessage::~LogMessage()
+#2 0x7fe549763cf9 content::BrowserMainLoop::EarlyInitialization()
+#3 0x7fe54976aa61 content::BrowserMainRunnerImpl::Initialize()
+#4 0x7fe546bc17c9 CefMainDelegate::RunProcess()
+#5 0x7fe549b41c22 content::RunNamedProcessTypeMain()
+#6 0x7fe549b42561 content::ContentMainRunnerImpl::Run()
+#7 0x7fe546b59dd1 CefContext::Initialize()
+#8 0x7fe546b59bab CefInitialize()
+#9 0x7fe546b0d698 cef_initialize
+#10 0x0000004058fb CefInitialize()
+#11 0x000000404ef5 main
+#12 0x7fe5456fcec5 __libc_start_main
+#13 0x00000040368c <unknown>
+
+[0229/122028:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/122051:WARNING:x11_util.cc(1407)] X error received: serial 1056, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/122051:WARNING:x11_util.cc(1407)] X error received: serial 1059, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/123949:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/123959:WARNING:x11_util.cc(1407)] X error received: serial 614, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0229/123959:WARNING:x11_util.cc(1407)] X error received: serial 615, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0229/123959:WARNING:x11_util.cc(1407)] X error received: serial 616, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0229/123959:WARNING:x11_util.cc(1407)] X error received: serial 700, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/123959:WARNING:x11_util.cc(1407)] X error received: serial 703, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/133454:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/133503:WARNING:x11_util.cc(1407)] X error received: serial 166, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/133503:WARNING:x11_util.cc(1407)] X error received: serial 169, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/133724:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/133738:WARNING:x11_util.cc(1407)] X error received: serial 1862, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/133738:WARNING:x11_util.cc(1407)] X error received: serial 1864, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0229/133738:WARNING:x11_util.cc(1407)] X error received: serial 1865, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/133853:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/133857:WARNING:x11_util.cc(1407)] X error received: serial 768, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/133857:WARNING:x11_util.cc(1407)] X error received: serial 771, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/150803:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/150806:WARNING:x11_util.cc(1407)] X error received: serial 534, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/150806:WARNING:x11_util.cc(1407)] X error received: serial 536, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0229/150806:WARNING:x11_util.cc(1407)] X error received: serial 537, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/152805:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/152834:WARNING:x11_util.cc(1407)] X error received: serial 3797, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0229/152834:WARNING:x11_util.cc(1407)] X error received: serial 3798, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0229/152834:WARNING:x11_util.cc(1407)] X error received: serial 3799, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0229/152834:WARNING:x11_util.cc(1407)] X error received: serial 3883, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/152834:WARNING:x11_util.cc(1407)] X error received: serial 3885, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0229/152834:WARNING:x11_util.cc(1407)] X error received: serial 3886, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/170406:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/170414:WARNING:x11_util.cc(1407)] X error received: serial 1059, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0229/170414:WARNING:x11_util.cc(1407)] X error received: serial 1060, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0229/170414:WARNING:x11_util.cc(1407)] X error received: serial 1061, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0229/170414:WARNING:x11_util.cc(1407)] X error received: serial 1145, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/170414:WARNING:x11_util.cc(1407)] X error received: serial 1147, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0229/170414:WARNING:x11_util.cc(1407)] X error received: serial 1148, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/170414:WARNING:spdy_session.cc(2428)] Received HEADERS for invalid stream 21
+[0229/170414:WARNING:x11_util.cc(1407)] X error received: serial 1209, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0229/170414:WARNING:x11_util.cc(1407)] X error received: serial 1210, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/170905:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/170925:WARNING:x11_util.cc(1407)] X error received: serial 2879, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/170925:WARNING:x11_util.cc(1407)] X error received: serial 2882, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/172508:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/172531:WARNING:x11_util.cc(1407)] X error received: serial 2070, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/172531:WARNING:x11_util.cc(1407)] X error received: serial 2072, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0229/172531:WARNING:x11_util.cc(1407)] X error received: serial 2073, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/172817:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/172901:WARNING:x11_util.cc(1407)] X error received: serial 3756, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0229/172901:WARNING:x11_util.cc(1407)] X error received: serial 3757, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0229/172901:WARNING:x11_util.cc(1407)] X error received: serial 3758, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0229/172901:WARNING:x11_util.cc(1407)] X error received: serial 3842, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/172901:WARNING:x11_util.cc(1407)] X error received: serial 3844, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0229/172901:WARNING:x11_util.cc(1407)] X error received: serial 3845, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0229/185952:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0229/190003:ERROR:ppapi_thread.cc(331)] Failed to load Pepper module from internal-pdf-viewer (error: internal-pdf-viewer: cannot open shared object file: Operation not permitted)
+[0229/190032:WARNING:x11_util.cc(1407)] X error received: serial 1256, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0229/190032:WARNING:x11_util.cc(1407)] X error received: serial 1259, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/113538:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/113726:WARNING:x11_util.cc(1407)] X error received: serial 174, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/113726:WARNING:x11_util.cc(1407)] X error received: serial 177, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/113730:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/113751:WARNING:x11_util.cc(1407)] X error received: serial 156, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/113751:WARNING:x11_util.cc(1407)] X error received: serial 158, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0301/113751:WARNING:x11_util.cc(1407)] X error received: serial 159, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/114543:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/114547:WARNING:x11_util.cc(1407)] X error received: serial 156, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/114547:WARNING:x11_util.cc(1407)] X error received: serial 159, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/114929:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/114954:WARNING:x11_util.cc(1407)] X error received: serial 156, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/114954:WARNING:x11_util.cc(1407)] X error received: serial 159, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/122256:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/122306:WARNING:x11_util.cc(1407)] X error received: serial 156, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/122306:WARNING:x11_util.cc(1407)] X error received: serial 159, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/122757:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/122804:WARNING:x11_util.cc(1407)] X error received: serial 156, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/122804:WARNING:x11_util.cc(1407)] X error received: serial 159, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/123047:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/123105:WARNING:x11_util.cc(1407)] X error received: serial 156, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/123105:WARNING:x11_util.cc(1407)] X error received: serial 159, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/123900:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/123904:WARNING:x11_util.cc(1407)] X error received: serial 156, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/123904:WARNING:x11_util.cc(1407)] X error received: serial 159, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/124047:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/124053:WARNING:x11_util.cc(1407)] X error received: serial 156, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/124053:WARNING:x11_util.cc(1407)] X error received: serial 159, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/125302:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/125318:WARNING:x11_util.cc(1407)] X error received: serial 1961, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/125318:WARNING:x11_util.cc(1407)] X error received: serial 1963, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0301/125318:WARNING:x11_util.cc(1407)] X error received: serial 1964, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/125621:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/125625:WARNING:x11_util.cc(1407)] X error received: serial 299, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/125625:WARNING:x11_util.cc(1407)] X error received: serial 300, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/125625:WARNING:x11_util.cc(1407)] X error received: serial 301, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/125625:WARNING:x11_util.cc(1407)] X error received: serial 385, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/125625:WARNING:x11_util.cc(1407)] X error received: serial 388, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/125748:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/125752:WARNING:x11_util.cc(1407)] X error received: serial 290, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/125752:WARNING:x11_util.cc(1407)] X error received: serial 291, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/125752:WARNING:x11_util.cc(1407)] X error received: serial 292, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/125752:WARNING:x11_util.cc(1407)] X error received: serial 376, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/125752:WARNING:x11_util.cc(1407)] X error received: serial 379, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/125929:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/125936:WARNING:x11_util.cc(1407)] X error received: serial 362, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/125936:WARNING:x11_util.cc(1407)] X error received: serial 363, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/125936:WARNING:x11_util.cc(1407)] X error received: serial 364, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/125936:WARNING:x11_util.cc(1407)] X error received: serial 448, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/125936:WARNING:x11_util.cc(1407)] X error received: serial 451, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/132950:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/133033:WARNING:x11_util.cc(1407)] X error received: serial 1664, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/133033:WARNING:x11_util.cc(1407)] X error received: serial 1665, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/133033:WARNING:x11_util.cc(1407)] X error received: serial 1666, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/133033:WARNING:x11_util.cc(1407)] X error received: serial 1750, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/133033:WARNING:x11_util.cc(1407)] X error received: serial 1753, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/141104:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/141125:WARNING:x11_util.cc(1407)] X error received: serial 426, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/141125:WARNING:x11_util.cc(1407)] X error received: serial 429, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/142529:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/142529:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0301/142551:WARNING:x11_util.cc(1407)] X error received: serial 176, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/142551:WARNING:x11_util.cc(1407)] X error received: serial 179, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/142907:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/142907:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0301/142912:WARNING:x11_util.cc(1407)] X error received: serial 174, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/142912:WARNING:x11_util.cc(1407)] X error received: serial 175, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/142912:WARNING:x11_util.cc(1407)] X error received: serial 176, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/142912:WARNING:x11_util.cc(1407)] X error received: serial 260, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/142912:WARNING:x11_util.cc(1407)] X error received: serial 263, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/152555:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/152622:WARNING:x11_util.cc(1407)] X error received: serial 1186, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/152622:WARNING:x11_util.cc(1407)] X error received: serial 1187, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/152622:WARNING:x11_util.cc(1407)] X error received: serial 1188, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/152622:WARNING:x11_util.cc(1407)] X error received: serial 1272, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/152622:WARNING:x11_util.cc(1407)] X error received: serial 1274, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0301/152622:WARNING:x11_util.cc(1407)] X error received: serial 1275, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/161015:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/161021:WARNING:x11_util.cc(1407)] X error received: serial 353, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/161021:WARNING:x11_util.cc(1407)] X error received: serial 354, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/161021:WARNING:x11_util.cc(1407)] X error received: serial 355, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/161021:WARNING:x11_util.cc(1407)] X error received: serial 439, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/161021:WARNING:x11_util.cc(1407)] X error received: serial 441, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0301/161021:WARNING:x11_util.cc(1407)] X error received: serial 442, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/163337:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/163343:WARNING:x11_util.cc(1407)] X error received: serial 354, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/163343:WARNING:x11_util.cc(1407)] X error received: serial 356, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0301/163343:WARNING:x11_util.cc(1407)] X error received: serial 357, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/171157:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/171206:WARNING:x11_util.cc(1407)] X error received: serial 516, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/171206:WARNING:x11_util.cc(1407)] X error received: serial 517, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/171206:WARNING:x11_util.cc(1407)] X error received: serial 518, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/171206:WARNING:x11_util.cc(1407)] X error received: serial 602, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/171206:WARNING:x11_util.cc(1407)] X error received: serial 604, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0301/171206:WARNING:x11_util.cc(1407)] X error received: serial 605, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/184237:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0301/184252:WARNING:x11_util.cc(1407)] X error received: serial 894, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/184252:WARNING:x11_util.cc(1407)] X error received: serial 895, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/184252:WARNING:x11_util.cc(1407)] X error received: serial 896, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/184252:WARNING:x11_util.cc(1407)] X error received: serial 980, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/184252:WARNING:x11_util.cc(1407)] X error received: serial 983, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/221907:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 305, error_code 8, request_code 42, minor_code 0
+
+[0301/221923:WARNING:x11_util.cc(1407)] X error received: serial 2212, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/221923:WARNING:x11_util.cc(1407)] X error received: serial 2213, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/221923:WARNING:x11_util.cc(1407)] X error received: serial 2214, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/221923:WARNING:x11_util.cc(1407)] X error received: serial 2298, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/221923:WARNING:x11_util.cc(1407)] X error received: serial 2301, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/222313:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 305, error_code 8, request_code 42, minor_code 0
+
+[0301/222323:WARNING:x11_util.cc(1407)] X error received: serial 629, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/222323:WARNING:x11_util.cc(1407)] X error received: serial 632, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/222614:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 305, error_code 8, request_code 42, minor_code 0
+
+[0301/222620:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 4654, error_code 3, request_code 3, minor_code 0
+
+[0301/222623:WARNING:x11_util.cc(1407)] X error received: serial 441, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/222623:WARNING:x11_util.cc(1407)] X error received: serial 442, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/222623:WARNING:x11_util.cc(1407)] X error received: serial 443, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/222623:WARNING:x11_util.cc(1407)] X error received: serial 527, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/222623:WARNING:x11_util.cc(1407)] X error received: serial 530, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/224042:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0301/224058:WARNING:x11_util.cc(1407)] X error received: serial 1529, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/224058:WARNING:x11_util.cc(1407)] X error received: serial 1531, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0301/224058:WARNING:x11_util.cc(1407)] X error received: serial 1532, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/230609:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0301/230622:WARNING:x11_util.cc(1407)] X error received: serial 520, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0301/230622:WARNING:x11_util.cc(1407)] X error received: serial 521, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0301/230622:WARNING:x11_util.cc(1407)] X error received: serial 522, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0301/230622:WARNING:x11_util.cc(1407)] X error received: serial 606, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/230622:WARNING:x11_util.cc(1407)] X error received: serial 609, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0301/231852:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0301/231911:WARNING:x11_util.cc(1407)] X error received: serial 4678, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0301/231911:WARNING:x11_util.cc(1407)] X error received: serial 4681, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/003546:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0302/003558:WARNING:x11_util.cc(1407)] X error received: serial 798, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/003558:WARNING:x11_util.cc(1407)] X error received: serial 801, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/003722:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0302/003728:WARNING:x11_util.cc(1407)] X error received: serial 384, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/003728:WARNING:x11_util.cc(1407)] X error received: serial 385, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/003728:WARNING:x11_util.cc(1407)] X error received: serial 386, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/003728:WARNING:x11_util.cc(1407)] X error received: serial 470, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/003728:WARNING:x11_util.cc(1407)] X error received: serial 472, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/003728:WARNING:x11_util.cc(1407)] X error received: serial 473, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/003951:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0302/003958:WARNING:x11_util.cc(1407)] X error received: serial 430, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/003958:WARNING:x11_util.cc(1407)] X error received: serial 433, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/005901:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0302/005908:WARNING:x11_util.cc(1407)] X error received: serial 448, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/005908:WARNING:x11_util.cc(1407)] X error received: serial 450, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/005908:WARNING:x11_util.cc(1407)] X error received: serial 451, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/010134:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0302/010139:WARNING:x11_util.cc(1407)] X error received: serial 339, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/010139:WARNING:x11_util.cc(1407)] X error received: serial 341, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/010139:WARNING:x11_util.cc(1407)] X error received: serial 342, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/010809:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0302/010815:WARNING:x11_util.cc(1407)] X error received: serial 358, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/010815:WARNING:x11_util.cc(1407)] X error received: serial 361, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/011148:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0302/011155:WARNING:x11_util.cc(1407)] X error received: serial 484, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/011155:WARNING:x11_util.cc(1407)] X error received: serial 486, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/011155:WARNING:x11_util.cc(1407)] X error received: serial 487, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/011337:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0302/011340:WARNING:x11_util.cc(1407)] X error received: serial 303, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/011340:WARNING:x11_util.cc(1407)] X error received: serial 304, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/011340:WARNING:x11_util.cc(1407)] X error received: serial 305, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/011340:WARNING:x11_util.cc(1407)] X error received: serial 389, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/011340:WARNING:x11_util.cc(1407)] X error received: serial 391, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/011340:WARNING:x11_util.cc(1407)] X error received: serial 392, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/014352:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0302/014400:WARNING:x11_util.cc(1407)] X error received: serial 529, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/014400:WARNING:x11_util.cc(1407)] X error received: serial 532, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/022541:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0302/022547:WARNING:x11_util.cc(1407)] X error received: serial 402, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/022547:WARNING:x11_util.cc(1407)] X error received: serial 403, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/022547:WARNING:x11_util.cc(1407)] X error received: serial 404, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/022547:WARNING:x11_util.cc(1407)] X error received: serial 488, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/022547:WARNING:x11_util.cc(1407)] X error received: serial 490, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/022547:WARNING:x11_util.cc(1407)] X error received: serial 491, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/111815:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/111820:WARNING:x11_util.cc(1407)] X error received: serial 389, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/111820:WARNING:x11_util.cc(1407)] X error received: serial 390, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/111820:WARNING:x11_util.cc(1407)] X error received: serial 391, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/111820:WARNING:x11_util.cc(1407)] X error received: serial 475, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/111820:WARNING:x11_util.cc(1407)] X error received: serial 478, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/111939:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/111944:WARNING:x11_util.cc(1407)] X error received: serial 371, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/111944:WARNING:x11_util.cc(1407)] X error received: serial 372, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/111944:WARNING:x11_util.cc(1407)] X error received: serial 373, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/111944:WARNING:x11_util.cc(1407)] X error received: serial 457, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/111944:WARNING:x11_util.cc(1407)] X error received: serial 459, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/111944:WARNING:x11_util.cc(1407)] X error received: serial 460, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/114026:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/114036:WARNING:x11_util.cc(1407)] X error received: serial 920, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/114036:WARNING:x11_util.cc(1407)] X error received: serial 921, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/114036:WARNING:x11_util.cc(1407)] X error received: serial 922, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/114036:WARNING:x11_util.cc(1407)] X error received: serial 1006, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/114036:WARNING:x11_util.cc(1407)] X error received: serial 1009, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/124812:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/124818:WARNING:x11_util.cc(1407)] X error received: serial 354, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/124818:WARNING:x11_util.cc(1407)] X error received: serial 355, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/124818:WARNING:x11_util.cc(1407)] X error received: serial 356, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/124818:WARNING:x11_util.cc(1407)] X error received: serial 440, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/124818:WARNING:x11_util.cc(1407)] X error received: serial 443, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/131601:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/131606:WARNING:x11_util.cc(1407)] X error received: serial 326, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/131606:WARNING:x11_util.cc(1407)] X error received: serial 327, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/131606:WARNING:x11_util.cc(1407)] X error received: serial 328, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/131606:WARNING:x11_util.cc(1407)] X error received: serial 412, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/131606:WARNING:x11_util.cc(1407)] X error received: serial 414, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/131606:WARNING:x11_util.cc(1407)] X error received: serial 415, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/145949:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/150007:WARNING:x11_util.cc(1407)] X error received: serial 352, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/150007:WARNING:x11_util.cc(1407)] X error received: serial 353, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/150007:WARNING:x11_util.cc(1407)] X error received: serial 354, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/150007:WARNING:x11_util.cc(1407)] X error received: serial 438, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/150007:WARNING:x11_util.cc(1407)] X error received: serial 440, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/150007:WARNING:x11_util.cc(1407)] X error received: serial 441, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/151343:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/151348:WARNING:x11_util.cc(1407)] X error received: serial 326, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/151348:WARNING:x11_util.cc(1407)] X error received: serial 327, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/151348:WARNING:x11_util.cc(1407)] X error received: serial 328, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/151348:WARNING:x11_util.cc(1407)] X error received: serial 412, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/151348:WARNING:x11_util.cc(1407)] X error received: serial 415, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/155234:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/155240:WARNING:x11_util.cc(1407)] X error received: serial 336, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/155240:WARNING:x11_util.cc(1407)] X error received: serial 338, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/155240:WARNING:x11_util.cc(1407)] X error received: serial 339, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/155931:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/155940:WARNING:x11_util.cc(1407)] X error received: serial 632, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/155940:WARNING:x11_util.cc(1407)] X error received: serial 633, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/155940:WARNING:x11_util.cc(1407)] X error received: serial 634, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/155940:WARNING:x11_util.cc(1407)] X error received: serial 718, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/155940:WARNING:x11_util.cc(1407)] X error received: serial 720, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/155940:WARNING:x11_util.cc(1407)] X error received: serial 721, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/160943:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/160957:WARNING:x11_util.cc(1407)] X error received: serial 615, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/160957:WARNING:x11_util.cc(1407)] X error received: serial 616, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/160957:WARNING:x11_util.cc(1407)] X error received: serial 617, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/160957:WARNING:x11_util.cc(1407)] X error received: serial 701, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/160957:WARNING:x11_util.cc(1407)] X error received: serial 704, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/161429:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/161433:WARNING:x11_util.cc(1407)] X error received: serial 363, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/161433:WARNING:x11_util.cc(1407)] X error received: serial 365, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/161433:WARNING:x11_util.cc(1407)] X error received: serial 366, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/165041:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/170716:WARNING:x11_util.cc(1407)] X error received: serial 2342, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/170716:WARNING:x11_util.cc(1407)] X error received: serial 2343, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/170716:WARNING:x11_util.cc(1407)] X error received: serial 2344, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/170716:WARNING:x11_util.cc(1407)] X error received: serial 2428, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/170716:WARNING:x11_util.cc(1407)] X error received: serial 2430, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/170716:WARNING:x11_util.cc(1407)] X error received: serial 2431, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/181153:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/181212:WARNING:x11_util.cc(1407)] X error received: serial 151, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/181212:WARNING:x11_util.cc(1407)] X error received: serial 154, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/181346:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/181444:WARNING:x11_util.cc(1407)] X error received: serial 169, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/181444:WARNING:x11_util.cc(1407)] X error received: serial 172, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/181834:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/181839:WARNING:x11_util.cc(1407)] X error received: serial 417, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/181839:WARNING:x11_util.cc(1407)] X error received: serial 420, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/182805:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/182811:WARNING:x11_util.cc(1407)] X error received: serial 371, error_code 9 (BadDrawable), request_code 153, minor_code 7 (Unknown)
+[0302/182811:WARNING:x11_util.cc(1407)] X error received: serial 372, error_code 9 (BadDrawable), request_code 153, minor_code 9 (Unknown)
+[0302/182811:WARNING:x11_util.cc(1407)] X error received: serial 373, error_code 9 (BadDrawable), request_code 153, minor_code 8 (Unknown)
+[0302/182811:WARNING:x11_util.cc(1407)] X error received: serial 457, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/182811:WARNING:x11_util.cc(1407)] X error received: serial 459, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/182811:WARNING:x11_util.cc(1407)] X error received: serial 460, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/194657:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/194701:WARNING:x11_util.cc(1407)] X error received: serial 310, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/194701:WARNING:x11_util.cc(1407)] X error received: serial 312, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0302/194701:WARNING:x11_util.cc(1407)] X error received: serial 313, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/194731:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/194737:WARNING:x11_util.cc(1407)] X error received: serial 327, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/194737:WARNING:x11_util.cc(1407)] X error received: serial 330, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0302/194900:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0302/194906:WARNING:x11_util.cc(1407)] X error received: serial 363, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0302/194906:WARNING:x11_util.cc(1407)] X error received: serial 366, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0303/230603:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0303/230603:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0304/003313:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0304/003314:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0304/015858:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0304/015901:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 313, error_code 8, request_code 42, minor_code 0
+
+[0304/132344:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0304/132345:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0304/143259:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0304/143300:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0307/135611:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0307/135612:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0307/144845:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0307/152826:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0307/152827:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0307/153819:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0307/153819:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0307/153819:ERROR:browser_gpu_channel_host_factory.cc(120)] Failed to launch GPU process.
+[0307/172614:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0307/172614:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0307/172614:ERROR:browser_gpu_channel_host_factory.cc(120)] Failed to launch GPU process.
+[0307/183704:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0307/183705:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0309/111656:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0309/111656:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0309/111712:WARNING:spdy_session.cc(2428)] Received HEADERS for invalid stream 1
+[0309/130501:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0309/130502:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0309/130526:WARNING:render_frame_host_impl.cc(1709)] OnDidStartLoading was called twice.
+[0309/130534:WARNING:spdy_session.cc(2428)] Received HEADERS for invalid stream 3
+[0309/130542:WARNING:spdy_session.cc(2428)] Received HEADERS for invalid stream 11
+[0309/130605:WARNING:render_frame_host_impl.cc(1724)] OnDidStopLoading was called twice.
+[0309/130612:WARNING:spdy_session.cc(2428)] Received HEADERS for invalid stream 15
+[0309/130648:WARNING:spdy_session.cc(2428)] Received HEADERS for invalid stream 27
+[0309/130649:WARNING:spdy_session.cc(2428)] Received HEADERS for invalid stream 31
+[0309/130803:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0309/130804:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0309/130822:WARNING:spdy_session.cc(2428)] Received HEADERS for invalid stream 5
+[0309/130823:WARNING:spdy_session.cc(2428)] Received HEADERS for invalid stream 1
+[0309/161609:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0309/161609:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0310/121207:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0310/121207:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0310/121619:ERROR:icu_util.cc(157)] Invalid file descriptor to ICU data received.
+[0310/121619:FATAL:content_main_runner.cc(649)] Check failed: base::i18n::InitializeICU(). 
+#0 0x7f61d817a35e <unknown>
+#1 0x7f61d818ef3b <unknown>
+#2 0x7f61daeb167c <unknown>
+#3 0x7f61d80e1932 <unknown>
+#4 0x7f61d80e172b <unknown>
+#5 0x7f61d8097418 cef_initialize
+#6 0x0000004058fb CefInitialize()
+#7 0x000000404ef5 main
+#8 0x7f61d6d0eec5 __libc_start_main
+#9 0x00000040368c <unknown>
+
+[0310/121706:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0310/121706:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0310/121706:ERROR:browser_gpu_channel_host_factory.cc(120)] Failed to launch GPU process.
+[0311/142142:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0311/142144:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0311/171355:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0311/171355:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0311/180926:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/180929:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/180929:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/180931:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/180931:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/180937:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/180937:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/180938:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/180938:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/180944:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/180944:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/180947:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/180947:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/180947:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/180947:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/180959:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/180959:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/181000:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/181000:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/181009:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/181009:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/181133:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/181133:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/181134:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/181134:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/181134:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0311/181134:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/181236:ERROR:cefclient_gtk.cc(47)] Received termination signal: 15
+
+[0311/181236:ERROR:browser_main_loop.cc(272)] Gtk: IA__gtk_widget_destroy: assertion 'GTK_IS_WIDGET (widget)' failed
+[0311/182249:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0316/002510:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/002510:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 306, error_code 8, request_code 42, minor_code 0
+
+[0316/002700:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/002700:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 306, error_code 8, request_code 42, minor_code 0
+
+[0316/004843:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/004843:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 306, error_code 8, request_code 42, minor_code 0
+
+[0316/100315:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/100316:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0316/100907:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/100907:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0316/101048:ERROR:cert_verify_proc_nss.cc(925)] CERT_PKIXVerifyCert for 192.168.1.109 failed err=-8179
+[0316/101256:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/101256:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0316/101256:ERROR:cert_verify_proc_nss.cc(925)] CERT_PKIXVerifyCert for 192.168.1.109 failed err=-8179
+[0316/101351:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0316/101351:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/101351:ERROR:browser_gpu_channel_host_factory.cc(120)] Failed to launch GPU process.
+[0316/101423:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0316/101423:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/101423:ERROR:browser_gpu_channel_host_factory.cc(120)] Failed to launch GPU process.
+[0316/101442:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0316/101443:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/101443:ERROR:browser_gpu_channel_host_factory.cc(120)] Failed to launch GPU process.
+[0316/101451:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0316/101451:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/101451:ERROR:browser_gpu_channel_host_factory.cc(120)] Failed to launch GPU process.
+[0316/110759:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/110800:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0316/113052:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/113053:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0316/113632:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0316/113632:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0317/193948:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0317/193955:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0318/144436:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0318/144438:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0321/105241:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0321/105242:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0321/120719:ERROR:cefclient_gtk.cc(47)] Received termination signal: 2
+
+[0321/120727:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0321/120727:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0321/145358:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0321/145358:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0321/145400:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 694, error_code 9, request_code 72, minor_code 0
+
+[0321/145400:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 695, error_code 9, request_code 72, minor_code 0
+
+[0321/145400:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 696, error_code 9, request_code 72, minor_code 0
+
+[0321/145400:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 697, error_code 9, request_code 72, minor_code 0
+
+[0321/145400:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 698, error_code 9, request_code 72, minor_code 0
+
+[0321/145400:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 699, error_code 9, request_code 72, minor_code 0
+
+[0321/145400:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 700, error_code 9, request_code 72, minor_code 0
+
+[0321/161842:FATAL:browser_main_loop.cc(217)] Running without the SUID sandbox! See https://chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox_development.md for more information on developing with the sandbox on.
+#0 0x7fd25c9b935e <unknown>
+#1 0x7fd25c9cdf3b <unknown>
+#2 0x7fd25ee6f379 <unknown>
+#3 0x7fd25ee760f1 <unknown>
+#4 0x7fd25c96b789 <unknown>
+#5 0x7fd25f6f0116 <unknown>
+#6 0x7fd25f6f0a51 <unknown>
+#7 0x7fd25c920951 <unknown>
+#8 0x7fd25c92072b <unknown>
+#9 0x7fd25c8d6418 cef_initialize
+#10 0x00000043aa1b CefInitialize()
+#11 0x00000041c4d3 client::MainContextImpl::Initialize()
+#12 0x000000412dba main
+#13 0x7fd259d07ec5 __libc_start_main
+#14 0x0000004092ac <unknown>
+

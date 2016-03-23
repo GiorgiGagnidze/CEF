@@ -1,0 +1,128 @@
+[0224/153422:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0224/153757:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 4925, error_code 3, request_code 15, minor_code 0
+
+[0224/153813:WARNING:x11_util.cc(1407)] X error received: serial 6619, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0224/153813:WARNING:x11_util.cc(1407)] X error received: serial 6621, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0224/153813:WARNING:x11_util.cc(1407)] X error received: serial 6622, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0224/154951:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0224/154957:ERROR:cert_verify_proc_nss.cc(925)] CERT_PKIXVerifyCert for 192.168.1.112 failed err=-8179
+[0224/155106:ERROR:selection_owner.cc(194)] SelectionClear
+[0224/160337:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 6537, error_code 3, request_code 15, minor_code 0
+
+[0224/163929:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 6918, error_code 3, request_code 15, minor_code 0
+
+[0224/164523:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 7188, error_code 3, request_code 15, minor_code 0
+
+[0224/173139:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 9324, error_code 3, request_code 15, minor_code 0
+
+[0224/183903:WARNING:x11_util.cc(1407)] X error received: serial 3431, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0224/183903:WARNING:x11_util.cc(1407)] X error received: serial 3433, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0224/183903:WARNING:x11_util.cc(1407)] X error received: serial 3434, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0224/183903:FATAL:browser_main.cc(188)] Check failed: 0 == CefBrowserContext::DebugObjCt (0 vs. 2)
+#0 0x7fb707bf04ae base::debug::StackTrace::StackTrace()
+#1 0x7fb707c38e5f logging::LogMessage::~LogMessage()
+#2 0x7fb70790bc3a CefBrowserMainParts::PostMainMessageLoopRun()
+#3 0x7fb70e9f8e79 content::BrowserMainLoop::ShutdownThreadsAndCleanUp()
+#4 0x7fb70e9ff0a3 content::BrowserMainRunnerImpl::Shutdown()
+#5 0x7fb707a57fae CefMainDelegate::ShutdownBrowser()
+#6 0x7fb707928f9d CefContext::FinalizeShutdown()
+#7 0x7fb7079284d9 CefContext::Shutdown()
+#8 0x7fb707928201 CefShutdown()
+#9 0x7fb7077e826d cef_shutdown
+#10 0x0000004a3b2d CefShutdown()
+#11 0x000000444474 client::MainContextImpl::Shutdown()
+#12 0x00000042a785 client::(anonymous namespace)::RunMain()
+#13 0x00000042a202 main
+#14 0x7fb701fa5ec5 __libc_start_main
+#15 0x00000040d8e4 <unknown>
+
+[0224/192413:FATAL:browser_main_loop.cc(217)] Running without the SUID sandbox! See https://chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox_development.md for more information on developing with the sandbox on.
+#0 0x7f42e153e4ae base::debug::StackTrace::StackTrace()
+#1 0x7f42e1586e5f logging::LogMessage::~LogMessage()
+#2 0x7f42e834215c content::(anonymous namespace)::SetupSandbox()
+#3 0x7f42e8341c58 content::BrowserMainLoop::EarlyInitialization()
+#4 0x7f42e834c5bd content::BrowserMainRunnerImpl::Initialize()
+#5 0x7f42e13a5af4 CefMainDelegate::RunProcess()
+#6 0x7f42e913db1b content::RunNamedProcessTypeMain()
+#7 0x7f42e913f75d content::ContentMainRunnerImpl::Run()
+#8 0x7f42e1275f6c CefContext::Initialize()
+#9 0x7f42e1275bba CefInitialize()
+#10 0x7f42e11361c3 cef_initialize
+#11 0x000000410337 CefInitialize()
+#12 0x00000040d763 main
+#13 0x7f42df578ec5 __libc_start_main
+#14 0x000000405ef4 <unknown>
+
+[0224/193012:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0224/193113:WARNING:x11_util.cc(1407)] X error received: serial 1945, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0224/193113:WARNING:x11_util.cc(1407)] X error received: serial 1948, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0224/193113:WARNING:ipc_message_attachment_set.cc(57)] MessageAttachmentSet destroyed with unconsumed descriptors: 0/1
+[0224/194740:WARNING:cefsimple_linux.cc(14)] X error received: type 0, serial 309, error_code 8, request_code 42, minor_code 0
+
+[0224/194758:WARNING:x11_util.cc(1407)] X error received: serial 733, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0224/194758:WARNING:x11_util.cc(1407)] X error received: serial 735, error_code 9 (BadDrawable), request_code 153, minor_code 4 (Unknown)
+[0224/194758:WARNING:x11_util.cc(1407)] X error received: serial 736, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0321/105135:FATAL:browser_main_loop.cc(217)] Running without the SUID sandbox! See https://chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox_development.md for more information on developing with the sandbox on.
+#0 0x7f8b752b74ae base::debug::StackTrace::StackTrace()
+#1 0x7f8b752ffe5f logging::LogMessage::~LogMessage()
+#2 0x7f8b7c0bb15c content::(anonymous namespace)::SetupSandbox()
+#3 0x7f8b7c0bac58 content::BrowserMainLoop::EarlyInitialization()
+#4 0x7f8b7c0c55bd content::BrowserMainRunnerImpl::Initialize()
+#5 0x7f8b7511eaf4 CefMainDelegate::RunProcess()
+#6 0x7f8b7ceb6b1b content::RunNamedProcessTypeMain()
+#7 0x7f8b7ceb875d content::ContentMainRunnerImpl::Run()
+#8 0x7f8b74feef6c CefContext::Initialize()
+#9 0x7f8b74feebba CefInitialize()
+#10 0x7f8b74eaf1c3 cef_initialize
+#11 0x0000004a3aa7 CefInitialize()
+#12 0x00000044418a client::MainContextImpl::Initialize()
+#13 0x00000042a5d8 client::(anonymous namespace)::RunMain()
+#14 0x00000042a202 main
+#15 0x7f8b6f66cec5 __libc_start_main
+#16 0x00000040d8e4 <unknown>
+
+[0321/105142:FATAL:browser_main_loop.cc(217)] Running without the SUID sandbox! See https://chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox_development.md for more information on developing with the sandbox on.
+#0 0x7f8a320304ae base::debug::StackTrace::StackTrace()
+#1 0x7f8a32078e5f logging::LogMessage::~LogMessage()
+#2 0x7f8a38e3415c content::(anonymous namespace)::SetupSandbox()
+#3 0x7f8a38e33c58 content::BrowserMainLoop::EarlyInitialization()
+#4 0x7f8a38e3e5bd content::BrowserMainRunnerImpl::Initialize()
+#5 0x7f8a31e97af4 CefMainDelegate::RunProcess()
+#6 0x7f8a39c2fb1b content::RunNamedProcessTypeMain()
+#7 0x7f8a39c3175d content::ContentMainRunnerImpl::Run()
+#8 0x7f8a31d67f6c CefContext::Initialize()
+#9 0x7f8a31d67bba CefInitialize()
+#10 0x7f8a31c281c3 cef_initialize
+#11 0x0000004a3aa7 CefInitialize()
+#12 0x00000044418a client::MainContextImpl::Initialize()
+#13 0x00000042a5d8 client::(anonymous namespace)::RunMain()
+#14 0x00000042a202 main
+#15 0x7f8a2c3e5ec5 __libc_start_main
+#16 0x00000040d8e4 <unknown>
+
+[0321/105210:WARNING:file_path_watcher_linux.cc(666)] Watch failed for /etc/../run/resolvconf: No space left on device
+[0321/105216:WARNING:cefclient_gtk.cc(32)] X error received: type 0, serial 310, error_code 8, request_code 42, minor_code 0
+
+[0321/105232:WARNING:x11_util.cc(1407)] X error received: serial 1119, error_code 181 (GLXBadWindow), request_code 154, minor_code 32 (Unknown)
+[0321/105232:WARNING:x11_util.cc(1407)] X error received: serial 1122, error_code 3 (BadWindow), request_code 4, minor_code 0 (Unknown)
+[0321/105232:FATAL:browser_main.cc(188)] Check failed: 0 == CefBrowserContext::DebugObjCt (0 vs. 2)
+#0 0x7f12b1f2a4ae base::debug::StackTrace::StackTrace()
+#1 0x7f12b1f72e5f logging::LogMessage::~LogMessage()
+#2 0x7f12b1c45c3a CefBrowserMainParts::PostMainMessageLoopRun()
+#3 0x7f12b8d32e79 content::BrowserMainLoop::ShutdownThreadsAndCleanUp()
+#4 0x7f12b8d390a3 content::BrowserMainRunnerImpl::Shutdown()
+#5 0x7f12b1d91fae CefMainDelegate::ShutdownBrowser()
+#6 0x7f12b1c62f9d CefContext::FinalizeShutdown()
+#7 0x7f12b1c624d9 CefContext::Shutdown()
+#8 0x7f12b1c62201 CefShutdown()
+#9 0x7f12b1b2226d cef_shutdown
+#10 0x0000004a3b2d CefShutdown()
+#11 0x000000444474 client::MainContextImpl::Shutdown()
+#12 0x00000042a785 client::(anonymous namespace)::RunMain()
+#13 0x00000042a202 main
+#14 0x7f12ac2dfec5 __libc_start_main
+#15 0x00000040d8e4 <unknown>
+
